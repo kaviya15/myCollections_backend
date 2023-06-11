@@ -31,7 +31,7 @@ createConnection.connect(function(err){
         process.exit(1)
     }
     app.listen(PORT,()=>{
-        console.log(`server running at port 3000`);
+        console.log(`server running at port ${PORT}`);
     });
 })
 
