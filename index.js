@@ -23,13 +23,14 @@ app.use(express.json());
 app.use("/my_personal_collection",router);
 
 /**connect to db */
+const PORT = process.env.PORT || 5000;
 
 createConnection.connect(function(err){
     if(err){
         console.log(err,"db connected failed")
         process.exit(1)
     }
-    app.listen("5000",()=>{
+    app.listen(PORT,()=>{
         console.log(`server running at port 3000`);
     });
 })
